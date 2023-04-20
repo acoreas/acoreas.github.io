@@ -1,0 +1,93 @@
+@import 'bootstrap/dist/css/bootstrap.min.css'
+@import "./variables/variables"
+
+.App
+  text-align: center
+  background-color: $bg-light
+  color: $font-dark
+
+body
+  padding-top: 80px
+  
+h1
+  color: $font-dark
+
+/*************** NAVBAR ***************/
+
+.nav-bar
+  background-color: $bg-dark
+  height: 80px
+  border-bottom: solid 5px $accent
+
+.nav-bar-dropdown, .nav-bar-item
+  font-size: 24px
+  font-weight: $semi-bold
+  color: $font-light
+  text-decoration-line: none
+  margin: 0.75rem 0.5rem
+  align-items: center
+
+  &:hover
+    color: $font-highlight
+
+.nav-bar-brand
+  @extend .nav-bar-item
+
+  font-size: 36px
+
+.nav-bar-dropdown-header
+  font-weight: $bold
+  color: $accent
+
+.nav-bar-dropdown-item
+  margin-left: 15px
+
+  &:hover
+    font-weight: $bold
+    background-color: transparent
+
+.nav-bar-github
+  @include icon(#6e5494, 36px)
+
+.nav-bar-linkedin
+  @include icon(#0077b5, 36px)
+
+/************* NAVBAR END **************/
+
+/**************** HOME *****************/
+
+.home-background
+  // height: 1080px
+  height: 105vh
+  position: relative
+  border-bottom: solid 10px $bg-dark
+  top: -80px
+  background: url("./images/calgary-skyscrapers.jpg") no-repeat center center
+
+.profile-description
+  width: 40%
+  margin: auto
+  position: relative
+  top: -50px
+
+  .profile-pic
+    border: solid 12px $bg-dark
+    margin-bottom: 15px
+
+/************** HOME END ***************/
+
+/*************** FOOTER ***************/
+
+.footer
+  align-content: center
+  justify-content: center
+  background-color: $bg-dark
+  bottom: 0
+
+.footer-github
+  @include icon(#6e5494, 36px)
+
+.footer-linkedin
+  @include icon(#0077b5, 36px)
+
+/************* FOOTER END *************/

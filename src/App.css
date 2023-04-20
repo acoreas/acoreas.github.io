@@ -1,38 +1,124 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 .App {
   text-align: center;
+  background-color: #F5F5F5;
+  color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #000000;
 }
 
-.App-header {
+/*************** NAVBAR ***************/
+.nav-bar {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 80px;
+  border-bottom: solid 5px #F28C28;
+}
+
+.nav-bar-dropdown, .nav-bar-item, .nav-bar-brand {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration-line: none;
+  margin: 0.75rem 0.5rem;
   align-items: center;
+}
+.nav-bar-dropdown:hover, .nav-bar-item:hover, .nav-bar-brand:hover {
+  color: #dddddd;
+}
+
+.nav-bar-brand {
+  font-size: 36px;
+}
+
+.nav-bar-dropdown-header {
+  font-weight: 700;
+  color: #F28C28;
+}
+
+.nav-bar-dropdown-item {
+  margin-left: 15px;
+}
+.nav-bar-dropdown-item:hover {
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.nav-bar-github {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  margin: 0.75rem 0.5rem;
+}
+.nav-bar-github:hover {
+  color: #6e5494;
+}
+
+.nav-bar-linkedin {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  margin: 0.75rem 0.5rem;
+}
+.nav-bar-linkedin:hover {
+  color: #0077b5;
+}
+
+/************* NAVBAR END **************/
+/**************** HOME *****************/
+.home-background {
+  height: 105vh;
+  position: relative;
+  border-bottom: solid 10px #282c34;
+  top: -80px;
+  background: url("./images/calgary-skyscrapers.jpg") no-repeat center center;
+}
+
+.profile-description {
+  width: 40%;
+  margin: auto;
+  position: relative;
+  top: -50px;
+}
+.profile-description .profile-pic {
+  border: solid 12px #282c34;
+  margin-bottom: 15px;
+}
+
+/************** HOME END ***************/
+/*************** FOOTER ***************/
+.footer {
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34;
+  bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-github {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  margin: 0.75rem 0.5rem;
+}
+.footer-github:hover {
+  color: #6e5494;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-linkedin {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+  margin: 0.75rem 0.5rem;
 }
+.footer-linkedin:hover {
+  color: #0077b5;
+}
+
+/************* FOOTER END *************/
+
+/*# sourceMappingURL=App.css.map */
