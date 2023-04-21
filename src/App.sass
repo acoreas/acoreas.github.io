@@ -2,9 +2,9 @@
 @import "./variables/variables"
 
 .App
-  text-align: center
   background-color: $bg-light
   color: $font-dark
+  overflow: hidden
 
 body
   padding-top: 80px
@@ -57,14 +57,18 @@ h1
 /**************** HOME *****************/
 
 .home-background
-  // height: 1080px
   height: 105vh
   position: relative
   border-bottom: solid 10px $bg-dark
   top: -80px
-  background: url("./images/calgary-skyscrapers.jpg") no-repeat center center
+  // background: url("./images/calgary-skyscrapers.jpg") no-repeat center center
+  background: url("./images/calgary-saddledome.jpg") no-repeat center bottom
+  background-size: cover
+  width: 100%
+  background-attachment: fixed
 
 .profile-description
+  text-align: center
   width: 40%
   margin: auto
   position: relative
@@ -76,13 +80,64 @@ h1
 
 /************** HOME END ***************/
 
+/************** PROJECTS ***************/
+.company-header
+  color: $font-dark
+  text-align: left
+  padding-left: 1vw
+  font-weight: $medium
+  font-variant: small-caps
+
+.proj-card
+  p, h3
+    text-align: left
+
+.proj-image
+  width: 38vw
+  margin: 1vw
+  border-radius: 5%
+
+.proj-desc
+  @extend .proj-image
+  width: 58vw
+
+/************ PROJECTS END *************/
+
+/************* EDUCATION ***************/
+.education-background
+  background: url("./images/Grad-1.jpg") no-repeat center top
+  background-size: contain
+  background-position: 0vw 0
+  height: 100vw
+  background-attachment: fixed
+  border-right: solid $accent 5px
+  padding-right: 40vw
+
+.education-text
+  color: $font-dark
+  font-weight: $bold
+  font-size: 48px
+  text-align: right
+  padding-right: 2vw
+
+  p
+    font-size: 24px
+    font-weight: normal
+
+/*********** EDUCATION END *************/
+
 /*************** FOOTER ***************/
 
 .footer
+  text-align: center
+  position: static
+  bottom: 0
+  width:100%
+
   align-content: center
   justify-content: center
   background-color: $bg-dark
-  bottom: 0
+  
 
 .footer-github
   @include icon(#6e5494, 36px)

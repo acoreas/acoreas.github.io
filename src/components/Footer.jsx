@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="footer">
       <a href="https://github.com/acoreas"><AiFillGithub className="footer-github"/></a>
-      <a href="https://www.linkedin.com/in/alancoreas/"><AiFillLinkedin className="footer-linkedin"/></a>
+      <a href="https://www.linkedin.com/in/alancoreas"><AiFillLinkedin className="footer-linkedin"/></a>
     </div>
   );
 }

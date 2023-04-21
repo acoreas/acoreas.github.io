@@ -1,8 +1,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 .App {
-  text-align: center;
   background-color: #F5F5F5;
   color: #000000;
+  overflow: hidden;
 }
 
 body {
@@ -76,10 +76,14 @@ h1 {
   position: relative;
   border-bottom: solid 10px #282c34;
   top: -80px;
-  background: url("./images/calgary-skyscrapers.jpg") no-repeat center center;
+  background: url("./images/calgary-saddledome.jpg") no-repeat center bottom;
+  background-size: cover;
+  width: 100%;
+  background-attachment: fixed;
 }
 
 .profile-description {
+  text-align: center;
   width: 40%;
   margin: auto;
   position: relative;
@@ -91,12 +95,63 @@ h1 {
 }
 
 /************** HOME END ***************/
+/************** PROJECTS ***************/
+.company-header {
+  color: #000000;
+  text-align: left;
+  padding-left: 1vw;
+  font-weight: 500;
+  font-variant: small-caps;
+}
+
+.proj-card p, .proj-card h3 {
+  text-align: left;
+}
+
+.proj-image, .proj-desc {
+  width: 38vw;
+  margin: 1vw;
+  border-radius: 5%;
+}
+
+.proj-desc {
+  width: 58vw;
+}
+
+/************ PROJECTS END *************/
+/************* EDUCATION ***************/
+.education-background {
+  background: url("./images/Grad-1.jpg") no-repeat center top;
+  background-size: contain;
+  background-position: 0vw 0;
+  height: 100vw;
+  background-attachment: fixed;
+  border-right: solid #F28C28 5px;
+  padding-right: 40vw;
+}
+
+.education-text {
+  color: #000000;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: right;
+  padding-right: 2vw;
+}
+.education-text p {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/*********** EDUCATION END *************/
 /*************** FOOTER ***************/
 .footer {
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100%;
   align-content: center;
   justify-content: center;
   background-color: #282c34;
-  bottom: 0;
 }
 
 .footer-github {

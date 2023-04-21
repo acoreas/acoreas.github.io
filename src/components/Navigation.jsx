@@ -37,7 +37,7 @@ function Navigation () {
               <Nav.Link><Link className="nav-bar-item" to="/education">Education</Link></Nav.Link>
               <Nav.Link><Link className="nav-bar-item" to="/contact">Contact</Link></Nav.Link>
               <a href="https://github.com/acoreas"><AiFillGithub className="nav-bar-github"/></a>
-              <a href="https://www.linkedin.com/in/alancoreas/"><AiFillLinkedin className="nav-bar-linkedin"/></a>
+              <a href="https://www.linkedin.com/in/alancoreas"><AiFillLinkedin className="nav-bar-linkedin"/></a>
             </Nav>
           </Navbar.Collapse>
         </Container>
