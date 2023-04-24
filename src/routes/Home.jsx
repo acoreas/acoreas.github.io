@@ -3,7 +3,6 @@ import { Box, Typography } from '@mui/material';
 import React from 'react'
 import { Stack } from 'react-bootstrap';
 import bg_photo from '../images/calgary-saddledome.jpg'
-
 import profile from '../images/Profile-1.PNG';
 
 

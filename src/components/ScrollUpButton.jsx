@@ -31,7 +31,7 @@ function ScrollUpButton() {
             sx={{
               position: "fixed",
               bottom: 16,
-              right: 16,
+              right: 16
             }}>
               <KeyboardArrowUpIcon />
           </Fab>
