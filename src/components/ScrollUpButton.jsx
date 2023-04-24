@@ -23,20 +23,20 @@ function ScrollUpButton() {
   }
   
   return (
-    <div>
+    <>
         <Fade in={show} timeout={400}>
-        <Fab
-          onClick={handleClick} 
-          size="small"
-          sx={{
-            position: "fixed",
-            bottom: 16,
-            right: 16
-          }}>
-            <KeyboardArrowUpIcon />
-        </Fab>
+          <Fab
+            onClick={handleClick} 
+            size="small"
+            sx={{
+              position: "fixed",
+              bottom: 16,
+              right: 16,
+            }}>
+              <KeyboardArrowUpIcon />
+          </Fab>
         </Fade>
-    </div>
+    </>
   )
 }
 
