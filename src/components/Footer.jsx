@@ -5,17 +5,18 @@ import { Link } from 'react-router-dom'
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/system/Stack';
 import IconButton from '@mui/material/IconButton';
+import { Box } from '@mui/material';
 
 export default function StickyFooter() {
   return (
     <>
-      <CssBaseline />
-        <Stack
-          direction="row"
+        <Box
+          display="flex"
+          width="100%"
           spacing={1.5}
           justifyContent="center"
           sx={{
-            py: 1,
+            height:"10vh",
             mt: "auto",
             backgroundColor: 'primary.main',
           }}
@@ -26,7 +27,7 @@ export default function StickyFooter() {
           <IconButton component={Link} to="https://www.linkedin.com/in/alancoreas">
             <LinkedInIcon sx={{color:"light.main", fontSize: "42px", "&:hover": {color: "#0077B5"}}}/>
           </IconButton>
-        </Stack>
+        </Box>
     </>
   );
 }

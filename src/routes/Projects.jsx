@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import * as React from 'react';
+import React, {useEffect} from 'react';
 import CustomTimelineItem from '../components/CustomTimelineItem'
 import Container from '@mui/material/Container';
 import CircleIcon from '@mui/icons-material/Circle';
@@ -62,6 +62,14 @@ const projs = {
 
 function Projects() {
 
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Optional if you want to skip the scrolling animation
+    });
+  },[])
+
   const ret = [];
   var i = 1;
 
@@ -74,7 +82,7 @@ function Projects() {
     
   return (
     <>
-      <Timeline sx={{paddingTop: "120px"}}>
+      <Timeline sx={{paddingTop: "50px"}}>
         <TimelineItem>
           <TimelineOppositeContent />
           

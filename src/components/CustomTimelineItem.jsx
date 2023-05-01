@@ -6,12 +6,8 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import PictureButton from './PictureButton';
-import { Box, Stack } from '@mui/system';
-import { Container, ImageListItem, Paper, Typography } from '@mui/material';
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
+import { Stack } from '@mui/system';
+import { Typography } from '@mui/material';
 
 function CustomTimeLineItem({project, index}) {
 
