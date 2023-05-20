@@ -14,9 +14,9 @@ function CustomTimeLineItem({project, index}) {
   var TLContent;
   var TLOppContent;
 
-  if (index % 2 == 1){
+  if (index % 2 === 1 || window.innerWidth < 600){
     TLContent = (
-      <Stack height="100%" justifyContent="center" alignItems="flex-start" mr="50%">
+      <Stack height="100%" justifyContent="center" alignItems="flex-start" mr={{sm: "35%"}}>
         <Typography variant="h5">{project.year}</Typography>
         <Typography variant="h6">{project.name}</Typography>
         <Typography>{project.shortDescription}</Typography>
@@ -35,7 +35,7 @@ function CustomTimeLineItem({project, index}) {
       </Stack>
     )
     TLOppContent = (
-      <Stack height="100%" justifyContent="center" alignItems="flex-end" ml="50%">
+      <Stack height="100%" justifyContent="center" alignItems="flex-end" ml="35%">
         <Typography variant="h5">{project.year}</Typography>
         <Typography variant="h6">{project.name}</Typography>
         <Typography>{project.shortDescription}</Typography>

@@ -9,7 +9,6 @@ import Contact from './routes/Contact';
 
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { useEffect } from 'react';
 
 function App() {
 

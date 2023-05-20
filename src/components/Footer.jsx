@@ -2,8 +2,6 @@ import * as React from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Link } from 'react-router-dom'
-import CssBaseline from '@mui/material/CssBaseline';
-import Stack from '@mui/system/Stack';
 import IconButton from '@mui/material/IconButton';
 import { Box } from '@mui/material';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import grad from '../images/Grad-1.jpg'
-import grad2 from '../images/Grad-2.jpg'
-import { Box, Fade, Grid, Typography } from '@mui/material';
+import grad from '../images/grad-1.jpg'
+import grad2 from '../images/grad-2.jpg'
+import { Box, Grid, Typography } from '@mui/material';
 import Carousel from 'react-material-ui-carousel';
 
 var images = [grad,grad2,grad,grad2]
@@ -16,19 +16,9 @@ function Education() {
       behavior: "instant", // Optional if you want to skip the scrolling animation
     });
 
-    var educationElement = document.querySelector('.education').getBoundingClientRect();
-    var extracurricularElement = document.querySelector('.extracurricular').getBoundingClientRect();
-    var spElement = document.querySelector('.schoolprojects').getBoundingClientRect();
-
     window.addEventListener('scroll', () => {
-    if(educationElement.bottom - 100 > window.scrollY) {
+    if(window.innerHeight/2 > window.scrollY) {
       setMainImage(0);
-    }
-    else if (extracurricularElement.bottom - 100 > window.scrollY) {
-      setMainImage(1);
-    }
-    else if (spElement.bottom - 100 > window.scrollY) {
-      setMainImage(2);
     }
     else {
       setMainImage(3);
@@ -44,7 +34,8 @@ function Education() {
         <Box className="education">
           <Typography variant='h2' fontWeight="bold" marginTop={3} marginBottom={1} sx={{fontVariant:"small-caps"}}>Education</Typography>
           <Typography variant='h5'>University of Calgary</Typography>
-          <Typography variant='h5'>BSc. Electrical Engineering<br/>(Biomedical Specialization)</Typography>
+          <Typography variant='h5'>BSc. Electrical Engineering</Typography>
+          <Typography variant='h6'>(Biomedical Specialization)</Typography>
 
           {/* Awards */}
           <Typography variant='h2' fontWeight="bold" marginTop={3} marginBottom={1} sx={{fontVariant:"small-caps"}}>Awards</Typography>
@@ -58,24 +49,6 @@ function Education() {
             U of C Entrance Scholarship<br/>
             Alexander Rutherford Scholarship
           </Typography>
-        </Box>
-
-        {/* Extracurricular */}
-        <Box className="extracurricular">
-          <Typography variant='h2' fontWeight="bold" marginTop={3} marginBottom={1} sx={{fontVariant:"small-caps"}}>Extracurricular</Typography>
-          <Typography variant='h4'>I4H Competition</Typography>
-          <Typography variant='h6'>Comp. Desc.</Typography>
-          <Typography variant='h4'>BCI Game Jam</Typography>
-          <Typography variant='h6'>Comp. Desc.</Typography>
-        </Box>
-
-        {/* School Projects */}
-        <Box className="schoolprojects">
-          <Typography variant='h2' fontWeight="bold" marginTop={3} marginBottom={1} sx={{fontVariant:"small-caps"}}>School Projects</Typography>
-          <Typography variant='h4'>Biometrics</Typography>
-          <Typography variant='h6'>Biometrics desc.</Typography>
-          <Typography variant='h4'>Machine Learning</Typography>
-          <Typography variant='h6'>ML desc.</Typography>
         </Box>
 
         {/* Publications */}

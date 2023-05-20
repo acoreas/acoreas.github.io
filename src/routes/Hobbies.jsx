@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material';
+import { Box} from '@mui/material';
 import React, { useEffect } from 'react'
 import Carousel from 'react-material-ui-carousel';
 import CarouselCard from '../components/CarouselCard';
@@ -36,12 +36,20 @@ function Hobbies() {
   },[])
 
   return (
-    
-      <Carousel animation='slide' sx={{minHeight:"80vh"}} duration={750} navButtonsAlwaysVisible={true} autoPlay={false}>
+    <Box sx={{minHeight:"80vh"}}>
+      <Carousel animation='slide' duration={750} navButtonsAlwaysVisible={true} autoPlay={false}
+        navButtonsWrapperProps={{
+          style: {
+            position:"fixed",
+            top: '10px',
+          }
+        }}
+      >
         {
           hobbies.map( (item, i) => <CarouselCard key={i} item={item} /> )
         }
       </Carousel>
+    </Box>
 
   );
 }

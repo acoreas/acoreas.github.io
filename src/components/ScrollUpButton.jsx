@@ -30,7 +30,7 @@ function ScrollUpButton() {
             size="small"
             sx={{
               position: "fixed",
-              bottom: 16,
+              bottom: 10,
               right: 16
             }}>
               <KeyboardArrowUpIcon />

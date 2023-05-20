@@ -1,9 +1,8 @@
-import { BorderBottom, BorderColor, Image } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 import React, { useEffect } from 'react'
-import { Stack } from 'react-bootstrap';
 import bg_photo from '../images/calgary-saddledome.jpg'
-import profile from '../images/Profile-1.PNG';
+import profile from '../images/profile-1.PNG';
 
 // Custom Component Styling Example
 //
@@ -14,6 +13,14 @@ import profile from '../images/Profile-1.PNG';
 // const myCustomComponent = styled (Button)(({ theme}) => ({
 //   padding: theme.spacing(2)
 // }));
+
+const bio = "\
+As you may have guessed from the lettering up top, my name is Alan. A proud Calgarian and Electrical Engineering graduate with a biomedical \
+specialization, I'm currently a research assistant in the Foothills NeuroFUS lab where I handle both software and hardware projects for use \
+in focused ultrasound applications including image processing, acoustic simulations, and transducer fabrication. While my \
+interests primarily lie in the medical field, I've also gained experience in product design, instrumentation & controls, and event planning. \
+There's still plenty more to learn about me so hope you'll stick around and discover the real me! \
+"
 
 function Home() {
 
@@ -34,7 +41,7 @@ function Home() {
       backgroundPosition: "bottom",
       backgroundSize: "cover",
       width: "100%",
-      height: "100vh",
+      height: "90vh",
       borderBottom: '8px solid',
       borderColor: "secondary.main",
       backgroundAttachment: "fixed"
@@ -42,14 +49,13 @@ function Home() {
     >
 
     </Box>
-    <Stack>
+    <Stack alignItems="center">
       <Box component="img" src={profile} border="solid 1.25vh" borderRadius="50%" height="40vh" alignSelf="center" mt="1.5rem"/>
       <Typography variant="h2" fontWeight="medium" align='center' m="1rem">
         Welcome!
       </Typography>
-      <Typography variant='paragraph' mx="15vw" align='center'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque aliquam. Eleifend donec pretium vulputate sapien. Sit amet massa vitae tortor. Convallis convallis tellus id interdum velit laoreet id. Leo vel fringilla est ullamcorper eget nulla facilisi etiam. Sodales neque sodales ut etiam sit amet. Faucibus vitae aliquet nec ullamcorper sit. Odio pellentesque diam volutpat commodo. Ac tortor vitae purus faucibus. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Odio morbi quis commodo odio aenean sed adipiscing. In nisl nisi scelerisque eu. Varius morbi enim nunc faucibus a pellentesque sit amet. Dolor purus non enim praesent elementum facilisis.
-        Magna sit amet purus gravida quis blandit. Scelerisque eleifend donec pretium vulputate sapien. Tincidunt augue interdum velit euismod in pellentesque. Amet volutpat consequat mauris nunc congue nisi. Mauris rhoncus aenean vel elit. Cras pulvinar mattis nunc sed blandit libero. Eget nunc lobortis mattis aliquam faucibus. Ut lectus arcu bibendum at. Metus aliquam eleifend mi in nulla posuere sollicitudin. Arcu risus quis varius quam. Donec pretium vulputate sapien nec sagittis. Adipiscing elit duis tristique sollicitudin nibh sit amet. Lorem donec massa sapien faucibus et molestie ac feugiat.  
+      <Typography textAlign="center" marginBottom={2} width={{xs: "95%",sm:"60%"}}>
+        {bio}
       </Typography>
     </Stack>
     </>

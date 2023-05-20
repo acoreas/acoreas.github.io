@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,12 +18,15 @@ const pages = ['Home', 'Projects', 'Volunteering','Hobbies','Education','Contact
 
 function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [activePageIndex, setActivePageIndex] = React.useState(0);
+  const location = useLocation()
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (event) => {
+    setActivePageIndex(event.currentTarget.id)
     setAnchorElNav(null);
   };
 
@@ -51,8 +54,6 @@ function ResponsiveAppBar(props) {
                     color: "inherit"
                   },
                   textDecoration: 'none',
-                  // justifyContent:"center",
-                  // alignSelf:"center"
                 }}
               >
                 ALAN COREAS
@@ -129,12 +130,14 @@ function ResponsiveAppBar(props) {
 
               {/* LARGE DEVICE NAVBAR */}
               <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', alignItems:"center"}}}>
-                {pages.map((page) => (
+                {pages.map((page,i) => (
                   <Button component={Link}
                     to={"/"+String(page)}
-                    key={page}
+                    activeStyle={{color: "red"}}
+                    key={i}
+                    id={i}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: 'white', display: 'block',"&:hover": {color: "secondary.main"}}}
+                    sx={{ my: 2, color: location.pathname.includes(String(page)) ? 'secondary.main' : 'white', display: 'block',"&:hover": {color: "secondary.main"}}}
                   >
                     {page}
                   </Button>

@@ -107,7 +107,7 @@
 /************ PROJECTS END *************/
 /************* EDUCATION ***************/
 .education-background {
-  background: url("./images/Grad-1.jpg") no-repeat center top;
+  background: url("./images/grad-1.jpg") no-repeat center top;
   background-size: contain;
   background-position: 0vw 0;
   height: 100vw;
@@ -161,5 +161,3 @@
 }
 
 /************* FOOTER END *************/
-
-/*# sourceMappingURL=App.css.map */

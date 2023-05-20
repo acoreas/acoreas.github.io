@@ -1,7 +1,9 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import { Modal } from '@mui/material';
+import ProjectModalContent from './ProjectModalContent';
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
@@ -68,15 +70,22 @@ const ImageMarked = styled('span')(({ theme }) => ({
 }));
 
 function PictureButton({project, index}) {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
+    <>
       <ImageButton 
         focusRipple
         key={project.name}
+        onClick={handleOpen}
         style={{
         width: "60%",
         }}
       >
-        <ImageSrc style={{ backgroundImage: `url(${project.image})`}} />
+        <ImageSrc style={{ backgroundImage: `url(${project.images[0]})`}} />
         <ImageBackdrop className="MuiImageBackdrop-root" />
         <Image>
           <Typography
@@ -95,6 +104,16 @@ function PictureButton({project, index}) {
           </Typography>
         </Image>
       </ImageButton>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{overflow:'scroll',}}
+      >
+        <ProjectModalContent projectmodal={project}/>
+      </Modal>
+    </>
   )
 }
 
