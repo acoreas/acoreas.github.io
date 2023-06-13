@@ -18,7 +18,6 @@ const pages = ['Home', 'Projects', 'Volunteering','Hobbies','Education','Contact
 
 function ResponsiveAppBar(props) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [activePageIndex, setActivePageIndex] = React.useState(0);
   const location = useLocation()
 
   const handleOpenNavMenu = (event) => {
@@ -26,16 +25,15 @@ function ResponsiveAppBar(props) {
   };
 
   const handleCloseNavMenu = (event) => {
-    setActivePageIndex(event.currentTarget.id)
     setAnchorElNav(null);
   };
 
   return (
     <>
       <CssBaseline >
-        <AppBar position='sticky' sx={{height:"10vh"}}>
-          <Container maxWidth="xxl" >
-            <Toolbar disableGutters>
+        <AppBar position='sticky' sx={{minHeight:"10vh"}}>
+          <Container maxWidth="xxl" sx={{height:"100%"}}>
+            <Toolbar disableGutters sx={{height:"100%"}} >
 
               {/* LARGE DEVICE BRANDNAME*/}
               <Typography
@@ -129,7 +127,7 @@ function ResponsiveAppBar(props) {
               </Typography>
 
               {/* LARGE DEVICE NAVBAR */}
-              <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', alignItems:"center"}}}>
+              <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', }, alignContent:"center"}}>
                 {pages.map((page,i) => (
                   <Button component={Link}
                     to={"/"+String(page)}

@@ -1,14 +1,23 @@
 import { Box, Button, Grid, InputAdornment, TextField, Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import SendIcon from '@mui/icons-material/Send';
+import credData from '../credentials/credentials.json'
 
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = credData.CONTACT_FORM_ENDPOINT;
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  },[])
   
   function handleSubmit() {
     setTimeout(() => {

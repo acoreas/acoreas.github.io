@@ -1,31 +1,47 @@
 import { Container, Typography } from '@mui/material'
 import React from 'react'
+import Carousel from 'react-material-ui-carousel';
 
 const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  transform: 'translate(0%, 10%)',
   width: "80vw",
-  maxHeight: "100vh",
+  maxHeight: "90vh",
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  overflow:'scroll',
 };
 
+function Item(props)
+{
+  return (
+    <Container 
+      component="img" 
+      src={props.item}
+      sx={{
+        objectFit:"contain", 
+        width:{xs:"100%",sm:"85%"}, 
+        height:"62vh",
+        objectPosition:"center center", 
+        paddingTop:1
+      }}
+    />
+  )   
+}
+
 function ProjectModalContent({projectmodal}) {
+
+  const main_image = projectmodal.images.filter(image => image.includes("main"))
   return (
     <Container sx={style}>
-
-      <Typography id="modal-modal-title" variant="h5" fontWeight="bold" textAlign="center" sx={{height:"10%"}}>
+      <Item item={projectmodal.images[0]} />
+      <Typography id="modal-modal-title" variant="h3" fontWeight="bold" textAlign="center" sx={{marginTop:2,height:"10%"}}>
         {projectmodal.name}
       </Typography>
-      <Container component="img" src={projectmodal.images[0]} sx={{objectFit:"cover", width:{xs:"100%",sm:"85%"}, height:"40%", objectPosition:"center bottom", paddingTop:1}}/>
       <Typography id="modal-modal-description" sx={{marginTop:2, height:"50%"}}>
         {projectmodal.description}
       </Typography>
-
     </Container>
   )
 }

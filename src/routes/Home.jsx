@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import React, { useEffect } from 'react'
-import bg_photo from '../images/calgary-saddledome.jpg'
-import profile from '../images/profile-1.PNG';
+import bg_photo from '../images/home/calgary-saddledome.jpg'
+import profile from '../images/home/profile-1.PNG';
 
 // Custom Component Styling Example
 //

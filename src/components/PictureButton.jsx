@@ -4,6 +4,10 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import { Modal } from '@mui/material';
 import ProjectModalContent from './ProjectModalContent';
+import Carousel from 'react-material-ui-carousel';
+import Projects, { projs } from '../routes/Projects';
+import { Container } from '@mui/system';
+
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
@@ -109,9 +113,25 @@ function PictureButton({project, index}) {
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{overflow:'scroll',}}
+
       >
-        <ProjectModalContent projectmodal={project}/>
+        <ProjectModalContent projectmodal={project} />
+        {/* Implementation for carousel modals, but have issue with button not opening right project */}
+        {/* <Carousel
+          animation='slide' 
+          duration={750} 
+          navButtonsAlwaysVisible={true} 
+          indicators={true}
+          autoPlay={false}
+          navButtonsWrapperProps={{
+            style: {
+              position:"fixed",
+              top: '10px',
+            }
+          }}
+        >
+          {Object.entries(projs).map( ([key,value]) => <ProjectModalContent projectmodal={value}/>)}
+        </Carousel> */}
       </Modal>
     </>
   )
