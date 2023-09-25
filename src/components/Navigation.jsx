@@ -30,11 +30,8 @@ function ResponsiveAppBar(props) {
 
   return (
     <>
-      <CssBaseline >
         <AppBar position='sticky' sx={{minHeight:"10vh"}}>
-          <Container maxWidth="xxl" sx={{height:"100%"}}>
-            <Toolbar disableGutters sx={{height:"100%"}} >
-
+            <Toolbar sx={{height:"10vh"}} >
               {/* LARGE DEVICE BRANDNAME*/}
               <Typography
                 variant="h5"
@@ -47,6 +44,7 @@ function ResponsiveAppBar(props) {
                   fontFamily: 'monospace',
                   fontWeight: 700,
                   letterSpacing: '.5rem',
+                  fontSize: '2rem',
                   color: "inherit",
                   "&:hover": {
                     color: "inherit"
@@ -116,6 +114,7 @@ function ResponsiveAppBar(props) {
                   fontFamily: 'monospace',
                   fontWeight: 700,
                   letterSpacing: '.5rem',
+                  fontSize: '1.5rem',
                   color: 'inherit',
                   textDecoration: 'none',
                   "&:hover": {
@@ -127,7 +126,7 @@ function ResponsiveAppBar(props) {
               </Typography>
 
               {/* LARGE DEVICE NAVBAR */}
-              <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', }, alignContent:"center"}}>
+              <Box justifyContent="flex-end" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', }}}>
                 {pages.map((page,i) => (
                   <Button component={Link}
                     to={"/"+String(page)}
@@ -135,18 +134,16 @@ function ResponsiveAppBar(props) {
                     key={i}
                     id={i}
                     onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: location.pathname.includes(String(page)) ? 'secondary.main' : 'white', display: 'block',"&:hover": {color: "secondary.main"}}}
+                    sx={{ my: 2,mx:0.5, color: location.pathname.includes(String(page)) ? 'secondary.main' : 'white', display: 'block',"&:hover": {color: "secondary.main"}, fontSize:"1rem"}}
                   >
                     {page}
                   </Button>
                 ))}
               </Box>
             </Toolbar>
-          </Container>
         </AppBar>
 
         <ScrollUpButton />
-      </CssBaseline>
     </>
   );
 }

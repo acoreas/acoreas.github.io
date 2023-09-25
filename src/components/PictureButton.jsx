@@ -86,7 +86,7 @@ function PictureButton({project, index}) {
         key={project.name}
         onClick={handleOpen}
         style={{
-        width: "60%",
+        width: "55%",
         }}
       >
         <ImageSrc style={{ backgroundImage: `url(${project.images[0]})`}} />

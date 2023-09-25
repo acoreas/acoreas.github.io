@@ -84,7 +84,7 @@ function Education() {
                     component="img" 
                     src={item} 
                     alt=""
-                    sx={{objectFit:"cover", position:"fixed",width:"80%"}} >
+                    sx={{objectFit:"cover", position:"fixed"}} >
                   </Container>
                 </>
               )
